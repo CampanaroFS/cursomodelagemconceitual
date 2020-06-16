@@ -11,7 +11,7 @@ import com.felipecampanaro.cursomc.dto.ClienteNewDTO;
 import com.felipecampanaro.cursomc.resources.exceptions.FieldMessage;
 import com.felipecampanaro.cursomc.services.validation.utils.BR;
 
-public class ClienteInserValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
+public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert, ClienteNewDTO> {
 	
 	@Override
 	public void initialize(ClienteInsert ann) {
