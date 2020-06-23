@@ -20,8 +20,8 @@ public abstract class AbstractEmailService implements EmailService {
 	@Value("${default.sender}")
 	private String sender;
 	
-	@Autowired
-	private JavaMailSender javaMailSender;
+	/*@Autowired
+	private JavaMailSender javaMailSender;*/
 	
 	@Autowired
 	private TemplateEngine templateEngine;
@@ -50,16 +50,16 @@ public abstract class AbstractEmailService implements EmailService {
 	
 	@Override
 	public void sendOrderConfirmationHtmlEmail(Pedido obj) {
-		try {
-		MimeMessage mm = prepareMimeMessageFromPedido(obj);
-		sendHtmlEmail(mm);
+		/*try {
+		//MimeMessage mm = prepareMimeMessageFromPedido(obj);
+		//sendHtmlEmail(mm);
 		} catch(MessagingException e) {
 			sendOrderConfirmationEmail(obj);
-		}
+		}*/
 	}
 
-	protected MimeMessage prepareMimeMessageFromPedido(Pedido obj) throws MessagingException {
-		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+	/*protected MimeMessage prepareMimeMessageFromPedido(Pedido obj) throws MessagingException {
+		//MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper mmh = new MimeMessageHelper(mimeMessage, true);
 		mmh.setTo(obj.getCliente().getEmail());
 		mmh.setFrom(sender);
@@ -68,5 +68,5 @@ public abstract class AbstractEmailService implements EmailService {
 		mmh.setText(htmlFromTemplatePedido(obj), true);
 		
 		return mimeMessage;
-	}
+	}*/
 }
