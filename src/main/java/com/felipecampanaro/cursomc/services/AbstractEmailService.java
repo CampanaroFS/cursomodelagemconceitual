@@ -51,15 +51,15 @@ public abstract class AbstractEmailService implements EmailService {
 	@Override
 	public void sendOrderConfirmationHtmlEmail(Pedido obj) {
 		/*try {
-		//MimeMessage mm = prepareMimeMessageFromPedido(obj);
-		//sendHtmlEmail(mm);
+		MimeMessage mm = prepareMimeMessageFromPedido(obj);
+		sendHtmlEmail(mm);
 		} catch(MessagingException e) {
 			sendOrderConfirmationEmail(obj);
 		}*/
 	}
 
 	/*protected MimeMessage prepareMimeMessageFromPedido(Pedido obj) throws MessagingException {
-		//MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper mmh = new MimeMessageHelper(mimeMessage, true);
 		mmh.setTo(obj.getCliente().getEmail());
 		mmh.setFrom(sender);
