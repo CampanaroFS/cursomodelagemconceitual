@@ -14,9 +14,12 @@ import com.amazonaws.services.s3.AmazonS3;
 <<<<<<< HEAD
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.felipecampanaro.cursomc.services.exceptions.FileException;
+<<<<<<< HEAD
 =======
 import com.amazonaws.services.s3.model.PutObjectRequest;
 >>>>>>> parent of 83e2f53... Send image by endpoint
+=======
+>>>>>>> 93f4ce133fe91380db57794416daae5c5bc2ba8f
 
 @Service
 public class S3Service {
